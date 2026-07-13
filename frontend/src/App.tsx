@@ -1,25 +1,15 @@
 import Header from './components/Header';
-import PresetSelector from './components/PresetSelector';
 import DataInput from './components/DataInput';
 import RegressionPlot from './components/RegressionPlot';
 import MetricsDashboard from './components/MetricsDashboard';
 import { useRegression } from './hooks/useRegression';
-import { PRESETS } from './constants';
 
 export function App() {
   const {
     points,
-    rawX,
-    rawY,
-    setRawX,
-    setRawY,
-    inputMode,
-    selectedPreset,
     loading,
     error,
     regressionResult,
-    handleTabChange,
-    handleLoadPreset,
     handleAddRow,
     handleRemoveRow,
     handleCellChange,
@@ -39,24 +29,12 @@ export function App() {
           
           {/* Left Column: Data Controls (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <PresetSelector
-              selectedPreset={selectedPreset}
-              onLoadPreset={handleLoadPreset}
-              presets={PRESETS}
-            />
-
             <DataInput
-              inputMode={inputMode}
-              onTabChange={handleTabChange}
               points={points}
               onCellChange={handleCellChange}
               onAddRow={handleAddRow}
               onRemoveRow={handleRemoveRow}
               onClearData={handleClearData}
-              rawX={rawX}
-              onRawXChange={setRawX}
-              rawY={rawY}
-              onRawYChange={setRawY}
               onRun={runRegression}
               loading={loading}
               error={error}

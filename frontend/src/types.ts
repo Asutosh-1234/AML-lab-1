@@ -17,9 +17,3 @@ export interface RegressionResponse {
   predictions: number[];
   metrics: RegressionMetrics;
 }
-
-export interface Preset {
-  name: string;
-  x: string;
-  y: string;
-}
