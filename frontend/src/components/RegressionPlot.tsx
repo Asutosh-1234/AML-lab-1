@@ -11,20 +11,7 @@ import {
 } from 'recharts';
 import { LineChart } from 'lucide-react';
 
-interface RegressionMetrics {
-  mae: number;
-  mse: number;
-  rmse: number;
-  r2: number;
-}
-
-interface RegressionResponse {
-  slope: number;
-  intercept: number;
-  predictions: number[];
-  metrics: RegressionMetrics;
-}
-
+import type { RegressionResponse } from '../types';
 interface ChartItem {
   x: number;
   y: number;

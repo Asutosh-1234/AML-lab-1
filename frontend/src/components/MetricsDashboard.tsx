@@ -1,12 +1,6 @@
 import { BarChart2, HelpCircle } from 'lucide-react';
 
-interface RegressionMetrics {
-  mae: number;
-  mse: number;
-  rmse: number;
-  r2: number;
-}
-
+import type { RegressionMetrics } from '../types';
 interface MetricsDashboardProps {
   metrics: RegressionMetrics | null;
 }

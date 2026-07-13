@@ -1,10 +1,5 @@
 import { Sparkles } from 'lucide-react';
-
-interface Preset {
-  name: string;
-  x: string;
-  y: string;
-}
+import type { Preset } from '../types';
 
 interface PresetSelectorProps {
   selectedPreset: string;
