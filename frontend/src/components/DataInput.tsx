@@ -28,7 +28,6 @@ export function DataInput({
       {/* Title */}
       <div className="mb-4">
         <h2 className="text-sm font-semibold text-slate-900 uppercase tracking-wider">Input Data Points</h2>
-        <p className="text-xs text-slate-500 mt-0.5 font-medium">Enter coordinates for independent (X) and dependent (Y) variables.</p>
       </div>
 
       <TableEditor

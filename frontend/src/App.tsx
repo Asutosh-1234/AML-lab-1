@@ -54,11 +54,6 @@ export function App() {
           </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="max-w-7xl mx-auto border-t border-slate-200 mt-16 px-6 py-6 text-center text-xs text-slate-400 font-semibold">
-        <p>RegressLab &copy; {new Date().getFullYear()} — Built with FastAPI, Vite, React & Recharts</p>
-      </footer>
     </div>
   );
 }
