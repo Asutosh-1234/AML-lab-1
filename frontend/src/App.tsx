@@ -10,6 +10,10 @@ export function App() {
     loading,
     error,
     regressionResult,
+    regressionMode,
+    setRegressionMode,
+    numFeatures,
+    setNumFeatures,
     handleAddRow,
     handleRemoveRow,
     handleCellChange,
@@ -31,6 +35,10 @@ export function App() {
           <div className="lg:col-span-5 space-y-6">
             <DataInput
               points={points}
+              regressionMode={regressionMode}
+              setRegressionMode={setRegressionMode}
+              numFeatures={numFeatures}
+              setNumFeatures={setNumFeatures}
               onCellChange={handleCellChange}
               onAddRow={handleAddRow}
               onRemoveRow={handleRemoveRow}
@@ -46,6 +54,8 @@ export function App() {
             <RegressionPlot
               chartData={chartData}
               regressionResult={regressionResult}
+              regressionMode={regressionMode}
+              numFeatures={numFeatures}
             />
 
             <MetricsDashboard
@@ -59,3 +69,4 @@ export function App() {
 }
 
 export default App;
+
